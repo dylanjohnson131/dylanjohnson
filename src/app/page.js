@@ -3,6 +3,26 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
+const skills = [
+  { name: "React", icon: "https://cdn.simpleicons.org/react" },
+  { name: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/white" },
+  { name: "JavaScript", icon: "https://cdn.simpleicons.org/javascript" },
+  { name: "HTML", icon: "https://cdn.simpleicons.org/html5" },
+  { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+  { name: "C#", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" },
+  { name: ".NET", icon: "https://cdn.simpleicons.org/dotnet" },
+  { name: "PostgreSQL", icon: "https://cdn.simpleicons.org/postgresql" },
+  { name: "Git", icon: "https://cdn.simpleicons.org/git" },
+  { name: "GitHub", icon: "https://cdn.simpleicons.org/github/white" },
+  { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs" },
+  { name: "Docker", icon: "https://cdn.simpleicons.org/docker" },
+  { name: "Vercel", icon: "https://cdn.simpleicons.org/vercel/white" },
+  { name: "Vite", icon: "https://cdn.simpleicons.org/vite" },
+  { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
+  { name: "Canva", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" },
+  { name: "Claude", icon: "https://cdn.simpleicons.org/anthropic" },
+];
+
 export default function Home() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -86,31 +106,31 @@ export default function Home() {
         </motion.div>
       </section>
 
-             {/* About Section */}
-        <section className="min-h-screen bg-slate-800 py-20 px-4 flex items-center">
-          <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true, amount: 0.3 }}
-            className="max-w-3xl"
-          >
-            <h2 className="text-5xl font-bold text-slate-900 mb-8">About Me</h2>
+      {/* About Section */}
+      <section className="min-h-screen bg-slate-800 py-20 px-4 flex items-center">
+        <motion.div
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true, amount: 0.3 }}
+          className="max-w-3xl"
+        >
+          <h2 className="text-5xl font-bold text-slate-900 mb-8">About Me</h2>
 
-            <p className="text-lg text-slate-300 leading-relaxed">
-              I spent five years running my own barbering business, which taught
-              me that communication is everything. Now I'm bringing that same
-              mindset to software development, where understanding what people
-              actually need is just as important as writing code. After
-              graduating from Nashville Software School, I joined Code Campfire
-              where I've been collaborating with other developers on real
-              projects. I recently built NextUp, a youth football management
-              platform, because I wanted to create something at the intersection
-              of sports and technology. Now I'm looking to join a team where I
-              can continue to contribute and grow as a developer.
-            </p>
-          </motion.div>
-        </section>
+          <p className="text-lg text-slate-300 leading-relaxed">
+            I spent five years running my own barbering business, which taught
+            me that communication is everything. Now I'm bringing that same
+            mindset to software development, where understanding what people
+            actually need is just as important as writing code. After graduating
+            from Nashville Software School, I joined Code Campfire where I've
+            been collaborating with other developers on real projects. I
+            recently built NextUp, a youth football management platform, because
+            I wanted to create something at the intersection of sports and
+            technology. Now I'm looking to join a team where I can continue to
+            contribute and grow as a developer.
+          </p>
+        </motion.div>
+      </section>
 
       {/* Projects Section - Fades in on scroll */}
       <section className="min-h-screen bg-white py-20 px-4">
@@ -178,6 +198,57 @@ export default function Home() {
               </div>
             </motion.div>
           </div>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section className="min-h-screen bg-slate-800 py-20 px-4 flex flex-col items-center justify-center">
+        <motion.h2
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.5 }}
+          className="text-5xl font-bold text-slate-900 mb-16"
+        >
+          Skills
+        </motion.h2>
+
+        {/* Carousel Container - We'll build this in Step 3 */}
+        {/* Carousel Container */}
+        <div className="w-full overflow-x-hidden overflow-y-visible relative pb-12">
+          <motion.div
+            className="flex gap-8"
+            animate={{
+              x: [0, -100 * skills.length],
+            }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 40,
+                ease: "linear",
+              },
+            }}
+          >
+            {/* Duplicate skills array for seamless loop */}
+            {[...skills, ...skills].map((skill, index) => (
+              <div key={index} className="flex-shrink-0 group relative">
+                {/* Logo */}
+                <img
+                  src={skill.icon}
+                  alt={skill.name}
+                  className="w-16 h-16 object-contain"
+                />
+
+                {/* Tooltip - Shows on hover */}
+                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                  <span className="text-sm text-slate-300 bg-slate-900 px-3 py-1 rounded">
+                    {skill.name}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </motion.div>
         </div>
       </section>
     </div>
