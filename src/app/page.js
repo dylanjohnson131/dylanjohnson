@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { Link } from 'next/link';
 
 const skills = [
   { name: "React", icon: "https://cdn.simpleicons.org/react" },
@@ -145,7 +146,7 @@ export default function Home() {
       </section>
 
       {/* Projects Section - Fades in on scroll */}
-      <section className="min-h-screen bg-white py-20 px-4">
+      <section className="min-h-screen bg-slate-700 py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
@@ -159,12 +160,15 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Project Card 1 - NextUp */}
-            <motion.div
+            <motion.a
+              href="https://github.com/dylanjohnson131/NextUp-Frontend"
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true, amount: 0.3 }}
-              className="bg-slate-50 rounded-2xl p-8 hover:shadow-xl transition-shadow"
+              className="bg-slate-400 rounded-2xl p-8 hover:shadow-xl transition-shadow block cursor-pointer hover:scale-105 transition-transform"
             >
               <h3 className="text-2xl font-bold text-slate-900 mb-4">NextUp</h3>
               <p className="text-slate-600 mb-4">
@@ -182,17 +186,21 @@ export default function Home() {
                   PostgreSQL
                 </span>
               </div>
-            </motion.div>
+            </motion.a>
 
             {/* Project Card 2 - AniDex */}
-            <motion.div
+            <motion.a
+              href="https://github.com/dylanjohnson131/AniDex-FrontEnd-Capstone-Project"
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true, amount: 0.3 }}
-              className="bg-slate-50 rounded-2xl p-8 hover:shadow-xl transition-shadow"
+              className="bg-slate-400 rounded-2xl p-8 hover:shadow-xl transition-shadow block cursor-pointer hover:scale-105 transition-transform"
             >
               <h3 className="text-2xl font-bold text-slate-900 mb-4">AniDex</h3>
+
               <p className="text-slate-600 mb-4">
                 Wildlife tracking application for conservation efforts with
                 real-time data management
@@ -208,7 +216,7 @@ export default function Home() {
                   .NET
                 </span>
               </div>
-            </motion.div>
+            </motion.a>
           </div>
         </div>
       </section>
@@ -225,7 +233,6 @@ export default function Home() {
           Skills
         </motion.h2>
 
-        {/* Carousel Container - We'll build this in Step 3 */}
         {/* Carousel Container */}
         <div className="w-full overflow-x-hidden overflow-y-visible relative pb-12">
           <motion.div
