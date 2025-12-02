@@ -8,8 +8,14 @@ const skills = [
   { name: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/white" },
   { name: "JavaScript", icon: "https://cdn.simpleicons.org/javascript" },
   { name: "HTML", icon: "https://cdn.simpleicons.org/html5" },
-  { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
-  { name: "C#", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" },
+  {
+    name: "CSS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  },
+  {
+    name: "C#",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+  },
   { name: ".NET", icon: "https://cdn.simpleicons.org/dotnet" },
   { name: "PostgreSQL", icon: "https://cdn.simpleicons.org/postgresql" },
   { name: "Git", icon: "https://cdn.simpleicons.org/git" },
@@ -18,8 +24,14 @@ const skills = [
   { name: "Docker", icon: "https://cdn.simpleicons.org/docker" },
   { name: "Vercel", icon: "https://cdn.simpleicons.org/vercel/white" },
   { name: "Vite", icon: "https://cdn.simpleicons.org/vite" },
-  { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
-  { name: "Canva", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" },
+  {
+    name: "VS Code",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+  },
+  {
+    name: "Canva",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg",
+  },
   { name: "Claude", icon: "https://cdn.simpleicons.org/anthropic" },
 ];
 
@@ -249,6 +261,85 @@ export default function Home() {
               </div>
             ))}
           </motion.div>
+        </div>
+      </section>
+      {/* Contact Section */}
+      <section className="min-h-screen bg-gradient-to-b from-slate-900 via-blue-950 to-slate-950 py-20 px-4 flex flex-col items-center justify-center">
+        <motion.h2
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.5 }}
+          className="text-5xl font-bold text-white mb-16 text-center"
+        >
+          Let's Connect!
+        </motion.h2>
+
+        {/* Contact Cards */}
+        <div className="grid md:grid-cols-3 gap-8 max-w-4xl w-full mb-12">
+          {/* Email Card */}
+          <motion.a
+            href="mailto:dylanjohnson263@gmail.com"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 hover:bg-slate-800/70 transition-all hover:scale-105 flex flex-col items-center text-center group"
+          >
+            <img
+               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/google/google-original.svg"
+              alt="Email"
+              className="w-12 h-12 mb-4"
+            />
+            <h3 className="text-xl font-bold text-white mb-2">Email</h3>
+            <p className="text-slate-300 text-sm group-hover:text-blue-300 transition-colors">
+              dylanjohnson263@gmail.com
+            </p>
+          </motion.a>
+
+          {/* GitHub Card */}
+          <motion.a
+            href="https://github.com/dylanjohnson131"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 hover:bg-slate-800/70 transition-all hover:scale-105 flex flex-col items-center text-center group"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+              alt="GitHub"
+              className="w-12 h-12 mb-4"
+            />
+            <h3 className="text-xl font-bold text-white mb-2">GitHub</h3>
+            <p className="text-slate-300 text-sm group-hover:text-blue-300 transition-colors">
+              github.com/dylanjohnson131
+            </p>
+          </motion.a>
+
+          {/* LinkedIn Card */}
+          <motion.a
+            href="https://linkedin.com/in/dylanjohnson100"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 hover:bg-slate-800/70 transition-all hover:scale-105 flex flex-col items-center text-center group"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" 
+              alt="LinkedIn"
+              className="w-12 h-12 mb-4"
+            />
+            <h3 className="text-xl font-bold text-white mb-2">LinkedIn</h3>
+            <p className="text-slate-300 text-sm group-hover:text-blue-300 transition-colors">
+              linkedin.com/in/dylanjohnson100
+            </p>
+          </motion.a>
         </div>
       </section>
     </div>
