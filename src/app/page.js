@@ -42,13 +42,11 @@ export default function Home() {
     offset: ["start start", "end start"],
   });
 
-  // Reduced parallax speeds - much more subtle
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
 
   return (
     <div ref={ref} className="overflow-hidden">
-      {/* Fixed Contact Sidebar - Desktop Only */}
       <div className="hidden lg:block fixed left-0 top-0 h-screen z-50">
         <div className="bg-slate-800/80 backdrop-blur-sm h-full w-24 flex flex-col items-center justify-center shadow-2xl border-r border-slate-700/50 px-6">
           <div className="flex flex-col gap-20">
@@ -66,7 +64,6 @@ export default function Home() {
               />
             </a>
 
-            {/* GitHub */}
             <a
               href="https://github.com/dylanjohnson131"
               target="_blank"
@@ -80,7 +77,6 @@ export default function Home() {
               />
             </a>
 
-            {/* Email */}
             <a
               href="mailto:dylanjohnson263@gmail.com"
               className="group relative"
@@ -91,13 +87,25 @@ export default function Home() {
                 className="w-8 h-8 hover:scale-110 transition-transform"
               />
             </a>
+
+            <a
+              href="/DylanJohnson2.pdf"
+              download="Dylan_Johnson_Resume.pdf"
+              className="group relative"
+            >
+              <img
+              src="https://api.iconify.design/heroicons:document-text.svg?color=%230077B5"
+              alt="Resume"
+              className="w-8 h-8 hover:scale-110 transition-transform"
+            />
+            </a>  
           </div>
         </div>
       </div>
       <div className="lg:ml-24">
+
         {/* Hero Section with Parallax */}
         <section className="relative h-screen flex items-center justify-center">
-          {/* Parallax Background */}
           <motion.div
             style={{ y: backgroundY }}
             className="absolute inset-0 z-0"
@@ -128,15 +136,6 @@ export default function Home() {
             >
               Full-Stack Developer
             </motion.p>
-
-            {/* <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-lg text-slate-300 max-w-2xl mx-auto"
-          >
-          building scalable web apps with React, Next.js, .NET
-          </motion.p> */}
           </motion.div>
 
           {/* Scroll Indicator */}
@@ -207,7 +206,7 @@ export default function Home() {
           </motion.div>
         </section>
 
-        {/* Projects Section - Fades in on scroll */}
+        {/* Projects Section */}
         <section className="min-h-screen bg-slate-700 py-20 px-8">
           <div className="max-w-6xl">
             <motion.h2
@@ -315,7 +314,6 @@ export default function Home() {
                 },
               }}
             >
-              {/* Duplicate skills array for seamless loop */}
               {[...skills, ...skills].map((skill, index) => (
                 <div key={index} className="flex-shrink-0 group relative">
                   {/* Logo */}
@@ -325,7 +323,7 @@ export default function Home() {
                     className="w-16 h-16 object-contain"
                   />
 
-                  {/* Tooltip - Shows on hover */}
+                  {/* Tooltip */}
                   <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
                     <span className="text-sm text-slate-300 bg-slate-900 px-3 py-1 rounded">
                       {skill.name}
@@ -348,9 +346,8 @@ export default function Home() {
             Let's Connect!
           </motion.h2>
 
-          {/* Contact Cards */}
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl w-full mb-12">
-            {/* Email Card */}
+
             <motion.a
               href="mailto:dylanjohnson263@gmail.com"
               initial={{ opacity: 0, y: 50 }}
@@ -370,7 +367,6 @@ export default function Home() {
               </p>
             </motion.a>
 
-            {/* GitHub Card */}
             <motion.a
               href="https://github.com/dylanjohnson131"
               target="_blank"
@@ -392,7 +388,6 @@ export default function Home() {
               </p>
             </motion.a>
 
-            {/* LinkedIn Card */}
             <motion.a
               href="https://linkedin.com/in/dylanjohnson100"
               target="_blank"
@@ -411,6 +406,27 @@ export default function Home() {
               <h3 className="text-xl font-bold text-white mb-2">LinkedIn</h3>
               <p className="text-slate-300 text-sm group-hover:text-blue-300 transition-colors">
                 linkedin.com/in/dylanjohnson100
+              </p>
+            </motion.a>
+
+            <motion.a
+              href=""
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true, amount: 0.4 }}
+              className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 hover:bg-slate-800/70 transition-all hover:scale-105 flex flex-col items-center text-center group"
+            >
+              <img
+                src="https://api.iconify.design/heroicons:document-text.svg?color=%230077B5"
+                alt="Resume"
+                className="w-12 h-12 mb-4"
+              />
+              <h3 className="text-xl font-bold text-white mb-2">Resume</h3>
+              <p className="text-slate-300 text-sm group-hover:text-blue-300 transition-colors">
+                DylanJohnson2.pdf
               </p>
             </motion.a>
           </div>
