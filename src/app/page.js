@@ -187,10 +187,9 @@ export default function Home() {
                 taught me that communication is everything. Now I'm bringing
                 that same mindset to software development, where understanding
                 what people actually need is just as important as writing code.
-                I recently built NextUp, a software solution at the intersection 
-                of sports and technology to manage sports and technology efficiently. 
-                Now I'm looking to join a team where I can continue to contribute and 
-                grow as a developer. Let's connect!
+                I recently built NextUp, a performance tracking and team management 
+                platform for youth football programs. I'm currently looking to join a team 
+                where I can continue to contribute and grow as a developer. Let's connect!
               </p>
               </div>
 
