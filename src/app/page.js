@@ -169,21 +169,21 @@ export default function Home() {
         </section>
 
         {/* About Section */}
-        <section className="min-h-screen bg-slate-800 py-20 px-8 flex items-center">
+        <section className="min-h-screen bg-slate-800 py-12 md:py-20 px-4 md:px-8 flex items-center">
           <motion.div
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true, amount: 0.3 }}
-            className="max-w-6xl w-full grid grid-cols-2 gap-8 items-center
-            bg-slate-700 p-10 rounded-xl shadow-2xl"
+            className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center
+            bg-slate-700 p-6 md:p-10 rounded-xl shadow-2xl"
           >
             <div>
-              <h2 className="text-5xl font-bold text-white mb-8">
+              <h2 className="text-3xl md:text-5xl font-bold text-blue-100 mb-6 md:mb-8">
                 About Me
               </h2>
 
-              <p className="text-lg text-slate-300 leading-relaxed">
+              <p className="text-base md:text-lg text-slate-300 leading-relaxed">
                 I spent the past five years running my own barbering business, which
                 taught me that communication is everything. Now I'm bringing
                 that same mindset to software development, where understanding
@@ -191,7 +191,7 @@ export default function Home() {
                 I recently built NextUp, a software solution at the intersection 
                 of sports and technology to manage sports and technology efficiently. 
                 Now I'm looking to join a team where I can continue to contribute and 
-                grow as a developer.
+                grow as a developer. Let's connect!
               </p>
               </div>
 
@@ -294,7 +294,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true, amount: 0.5 }}
-            className="text-5xl font-bold text-slate-900 mb-16"
+            className="text-5xl font-bold text-blue-100 mb-16"
           >
             Skills
           </motion.h2>
@@ -343,7 +343,7 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true, amount: 0.5 }}
-            className="text-5xl font-bold text-white mb-16 text-center"
+            className="text-5xl font-bold text-blue-100 mb-16 text-center"
           >
             Let's Connect!
           </motion.h2>
