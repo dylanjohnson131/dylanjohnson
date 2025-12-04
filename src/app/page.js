@@ -410,7 +410,7 @@ export default function Home() {
             </motion.a>
 
             <motion.a
-              href=""
+              href="/DylanJohnson2.pdf"
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 50 }}
