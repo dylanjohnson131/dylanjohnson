@@ -273,12 +273,6 @@ export default function Home() {
                   <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">
                     React
                   </span>
-                  <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">
-                    C#
-                  </span>
-                  <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">
-                    .NET
-                  </span>
                 </div>
               </motion.a>
             </div>
