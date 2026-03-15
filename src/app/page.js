@@ -87,7 +87,7 @@ export default function Home() {
             </a>
 
             <a
-              href="/DylanJohnson2.pdf"
+              href="/DylanJohnsonResume.pdf"
               download="Dylan_Johnson_Resume.pdf"
               className="group relative"
             >
