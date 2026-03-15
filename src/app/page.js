@@ -22,7 +22,6 @@ const skills = [
   { name: "GitHub", icon: "https://cdn.simpleicons.org/github" },
   { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs" },
   { name: "Docker", icon: "https://cdn.simpleicons.org/docker" },
-  { name: "Vercel", icon: "https://cdn.simpleicons.org/vercel" },
   { name: "Vite", icon: "https://cdn.simpleicons.org/vite" },
   {
     name: "VS Code",
@@ -32,7 +31,6 @@ const skills = [
     name: "Canva",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg",
   },
-  { name: "Claude", icon: "https://cdn.simpleicons.org/anthropic" },
 ];
 
 export default function Home() {
