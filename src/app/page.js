@@ -403,7 +403,7 @@ export default function Home() {
             </motion.a>
 
             <motion.a
-              href="/DylanJohnson2.pdf"
+              href="/DylanJohnsonResume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, y: 50 }}
@@ -419,7 +419,7 @@ export default function Home() {
               />
               <h3 className="text-xl font-bold text-white mb-2">Resume</h3>
               <p className="text-slate-300 text-sm group-hover:text-blue-300 transition-colors">
-                DylanJohnson2.pdf
+                DylanJohnsonResume.pdf
               </p>
             </motion.a>
           </div>
